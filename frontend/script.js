@@ -1,6 +1,6 @@
 async function getMessage() {
     const response = await fetch(
-        "http://YOUR_EC2_PUBLIC_IP:3000/api/message"
+        "http://3.107.232.252:3000/api/message"
     );
 
     const data = await response.json();
