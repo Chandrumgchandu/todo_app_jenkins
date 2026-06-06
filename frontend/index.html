@@ -6,13 +6,64 @@
 </head>
 <body>
 
-    <div class="container">
-        <h1>DevOps Todo App</h1>
+<div class="container">
+
+    <h1>DevOps Todo App</h1>
+
+    <div id="authSection">
+
+        <h2>Register</h2>
+
+        <input
+            type="text"
+            id="registerUsername"
+            placeholder="Username"
+        >
+
+        <input
+            type="password"
+            id="registerPassword"
+            placeholder="Password"
+        >
+
+        <button onclick="registerUser()">
+            Register
+        </button>
+
+        <hr>
+
+        <h2>Login</h2>
+
+        <input
+            type="text"
+            id="loginUsername"
+            placeholder="Username"
+        >
+
+        <input
+            type="password"
+            id="loginPassword"
+            placeholder="Password"
+        >
+
+        <button onclick="loginUser()">
+            Login
+        </button>
+
+    </div>
+
+    <div id="todoSection" style="display:none;">
+
+        <button onclick="logout()">
+            Logout
+        </button>
+
+        <hr>
 
         <input
             type="text"
             id="todoInput"
-            placeholder="Enter a todo"
+            placeholder="Enter Todo"
         >
 
         <button onclick="addTodo()">
@@ -20,9 +71,12 @@
         </button>
 
         <ul id="todoList"></ul>
+
     </div>
 
-    <script src="script.js"></script>
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
