@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>DevOps Demo</title>
+    <title>DevOps Todo App</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
-        <h1>DevOps Learning Project</h1>
+        <h1>DevOps Todo App</h1>
 
-        <button onclick="getMessage()">
-            Get Backend Message
+        <input
+            type="text"
+            id="todoInput"
+            placeholder="Enter a todo"
+        >
+
+        <button onclick="addTodo()">
+            Add Todo
         </button>
 
-        <p id="result"></p>
+        <ul id="todoList"></ul>
     </div>
 
     <script src="script.js"></script>
+
 </body>
 </html>
