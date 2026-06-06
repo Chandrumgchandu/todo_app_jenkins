@@ -141,7 +141,11 @@ async function loadTodos() {
 
     const todos =
         await response.json();
+	
 
+     console.log("Todos Response:", todos);
+     console.log("Response Status:", response.status);
+    
     const list =
         document.getElementById(
             "todoList"
