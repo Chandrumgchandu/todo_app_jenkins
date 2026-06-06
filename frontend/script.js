@@ -147,25 +147,29 @@ async function loadTodos() {
             "todoList"
         );
 
-    list.innerHTML = "";
+li.innerHTML = `
+    <span class="${
+        todo.completed ? "completed" : ""
+    }">
+        ${todo.completed ? "✅" : "⬜"}
+        ${todo.title}
+    </span>
 
-    todos.forEach(todo => {
+    <div class="todo-actions">
 
-        const li =
-            document.createElement("li");
+        <button onclick="completeTodo(${todo.id})">
+            Complete
+        </button>
 
-        li.innerHTML = `
-            ${todo.completed ? "✅" : "⬜"}
-            ${todo.title}
+        <button onclick="deleteTodo(${todo.id})">
+            Delete
+        </button>
 
-            <button onclick="completeTodo(${todo.id})">
-                Complete
-            </button>
+    </div>
+`;
 
-            <button onclick="deleteTodo(${todo.id})">
-                Delete
-            </button>
-        `;
+
+
 
         list.appendChild(li);
 
