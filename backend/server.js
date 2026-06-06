@@ -8,8 +8,9 @@ const pool = require("./db");
 const auth = require("./middleware/auth");
 
 const app = express();
+require("dotenv").config();
 
-const JWT_SECRET = "mysecretkey";
+const JWT_SECRET = process.env.JWT_SECRET;
 
 app.use(cors());
 app.use(express.json());
