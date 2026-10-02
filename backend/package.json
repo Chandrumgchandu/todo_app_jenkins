@@ -1,12 +1,18 @@
 {
-  "name": "backend",
+  "name": "todo-backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Express API for the Todo DevOps lab",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "test": "node --check server.js && node --check db.js && node --check middleware/auth.js"
   },
-  "keywords": [],
+  "keywords": [
+    "devops",
+    "todo",
+    "express",
+    "postgres"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
